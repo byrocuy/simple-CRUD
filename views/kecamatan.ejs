@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css'/>
+  <link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css'>
+ </head>
+ <body>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <form action='kecamatan/tambah' method='post' role='form'>
+   <div class='form-group'>
+    <label for='exampleInputEmail'>Nama</label>
+    <input type='text' name='nama' class='form-control' placeholder='Enter Nama Kecamatan' required>
+   </div>
+   
+   <button type='submit' class='btn btn-primary'>Submit</button>
+ </body>
+ <script src='bootstrap/js/bootstrap.min.js' ></script>
+</html>

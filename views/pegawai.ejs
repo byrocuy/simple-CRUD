@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css'/>
+  <link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css'>
+ </head>
+ <body>
+  <h1><%= title %></h1>
+  <p>Welcome to <%= title %></p>
+  <form action='pegawai/tambah' method='post' role='form'>
+   <div class='form-group'>
+    <label for='exampleInputEmail'>Nama</label>
+    <input type='text' name='nama' class='form-control' placeholder='Enter Nama' required>
+   </div>
+   <div class='form-group'>
+    <label for='exampleInputEmail'>Email</label>
+    <input type='text' name='email' class='form-control' placeholder='Email' required>
+   </div>
+   <div class='form-group'>
+    <label for='exampleInputEmail'>Umur</label>
+    <input type='number' name='umur' class='form-control' placeholder='Umur' required>
+   </div>
+   <div class='form-group'>
+    <label for='exampleInputEmail'>Kecamatan</label>
+    <select type='text' name='id_kec' class='form-control' required>
+     <% for(var i = 0; i < kecamatan.length; i++){ %>
+     <option value='<%= kecamatan[i]._id %>' ><%= kecamatan[i].nama %></option>
+     <% } %>
+    </select>
+   </div> 
+   <button type='submit' class='btn btn-primary'>Submit</button>
+ </body>
+ <script src='bootstrap/js/bootstrap.min.js' ></script>
+</html>

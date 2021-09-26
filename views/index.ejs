@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title><%= title %></title>
+  <link rel='stylesheet' href='/stylesheets/style.css'/>
+  <link rel='stylesheet' href='/bootstrap/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384 B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+ </head>
+ <body>
+    <h1><%= title %></h1>
+   <p>Welcome to <%= title %></p>
+   <p>Data Pegawai</p>
+   <table class='table'>
+    <thead>
+     <tr>
+      <th scope='col'>#</th>
+      <th scope='col'>Nama</th>
+      <th scope='col'>Email</th>
+      <th scope='col'>Umur</th>
+      <th scope='col'>Kecamatan</th>
+   
+     </tr>
+    </thead>
+    <tbody>
+    <% var no=1 %>
+    <% for(var i = 0; i < pegawai.length; i++){ %>
+     <tr>
+      <th scope='row'><%= no++ %></th>
+      <td><%= pegawai[i].nama %></td>
+      <td><%= pegawai[i].email %></td>
+      <td><%= pegawai[i].umur %></td>
+      <td><%= pegawai[i].id_kec.nama %></td>
+      <td><a href="/pegawai/edit/<%= pegawai[i]._id %>"><i class="far fa-edit"></i></a> <a href="/pegawai/delete/<%= pegawai[i]._id %>" onclick="return confirm('Apa kamu yakin akan menghapus data ini')" ><i class="fas fa-trash" ></i></a> </td>
+     </tr>
+    <% } %>
+    </tbody>  
+   </table>
+ </body>
+</html>
