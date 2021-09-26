@@ -36,7 +36,7 @@ PegawaiController.delete = function(req, res){
     })
 }
 
-// Edit data pegawai
+// Edit instance pegawai
 
 
 module.exports = PegawaiController;
