@@ -21,4 +21,14 @@ router.get('/delete/:_id', function(req, res){
     pegawai.delete(req, res)
 })
 
+// Edit data pegawai
+router.get('/edit/:_id', function(req, res){
+    pegawai.edit(req, res);
+})
+
+// Update data pegawai
+router.post('/update/:_id', function(req, res){
+    pegawai.update(req, res);
+})
+
 module.exports = router;
